@@ -3,6 +3,7 @@
     include('config2.php');
     
     $userName = "".$_SESSION['username']."";
+    echo $userName;
 
     //grab tack data
     $result="SELECT * FROM tack WHERE userName='$userName'";
@@ -63,8 +64,7 @@
                 
                 <div class="collapse navbar-collapse navbar-ex1-collapse pull-right">
                   <dl class="nav navbar-nav">
-                    <li><a href="register.php">Create</a></li>
-                    <li><a href="Contact/contact.php">Contact</a></li>
+                    <li><a href="logout.php">Logout <?php echo $userName;?></a></li>
                   </dl>
                   
                 </div><!-- /.navbar-collapse -->
