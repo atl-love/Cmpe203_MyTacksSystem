@@ -1,32 +1,32 @@
 <?php
+    session_start();
     include('config2.php');
-    session_start();    
+    
+    $userName = "".$_SESSION['username']."";
+
+    //grab tack data
+    $result="SELECT * FROM tack WHERE userName='$userName'";
+        
+    if (!$result) {
+	echo 'Could not run query: ' . mysql_error();
+	exit;
+    }	    
 ?>
 <!DOCTYPE html>
 <html>
     <head>
-		<script src="jQuery.js"></script>
+		<script src = "http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src = "js/bootstrap.js"></script>
+                <script src="jQuery.js"></script>
+                <script src="js/jquery-2.0.3.js"></script>
+                <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.10.2.min.js"></script>
 		<script type="text/javascript" src="http://www.websnapr.com/js/websnapr.js"></script>
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/bootstrap_homepage.css">
 		<title>MyTacks.com</title>
 
-	</head>
+    </head>
 	<body>
-		<?php
-		    // Create connection
-		    include ("config2.php");		
-    
-			//grab tack data
-			$result="SELECT * FROM tack";
-			if (!$result) {
-				echo 'Could not run query: ' . mysql_error();
-				exit;
-			}			
-		?>
-		
-		
-		
 		<nav class="navbar navbar-inverse" role="navigation">
 		  <!-- Brand and toggle get grouped for better mobile display -->
 		  <div class="navbar-header">
@@ -77,7 +77,7 @@
 		  </div><!-- /.col-lg-6 -->
 			<ul class="nav navbar-nav navbar-right">
 			  <li class="dropdown">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown">UserName <b class="caret"></b></a>
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo "$userName" ?><b class="caret"></b></a>
 				<ul class="dropdown-menu">
 				  <li><a href="#">About us</a></li>
 				  <li><a href="#">Account Setting</a></li>
@@ -89,7 +89,7 @@
 		  </div><!-- /.navbar-collapse -->
 		</nav>	
 		
-		
+		<!-- Left Sidebar -->
 		<div class="row">
 		  <div class="col-md-2">
 			<!--the button set section-->
@@ -119,26 +119,22 @@
 			  </script>
 			</div>
 		  </div>
-		  
-		  
-		  <div class="col-md-8">
+    
+    		  <div class="col-md-8">
 		  <div class="row">
-		  
 		  <div class="col-sm-6 col-md-4">
 				<div class="thumbnail">
-				<a href = "#createtack" data-toggle="modal">
+				<a href = "#tack" data-toggle="modal">
 					<img src="img/plus.jpg" style="height:200px;width:200px;display: block; margin: 0.5cm">
 				</a>
 					
 				  <div class="caption">
-					<h4>Create New Tack</h4>
-					<p>Click to create a new tack.<p>
+					<h4> Create New Tack</h4>
+					<a href = "#tack" data-toggle="modal"> Click to create a new tack.</a>
 				  </div>
 				</div>
-
 		  </div>
-		  
-		  
+                  
 		  <?php
 			$tack_num=1;
 			//echo mysqli_num_rows($result);
@@ -164,55 +160,9 @@
 				}
                             }
 		  ?>
-			<!--Tack Object-->
-			
-			  <div class="col-sm-6 col-md-4">
-				<div class="thumbnail">
-
-				  <!--The JS function to printout img by url-->
-				  <script>
-					function img_preview(url) {
-						var apiKey = 'bTmGswCsoBm9',
-							thumbail;
-						thumbnail = 'http://images.websnapr.com/?url=' + url + '&key=bTmGswCsoBm9&hash=' + encodeURIComponent(websnapr_hash);
-						document.write('<a target="_blank" style="display: block; margin: 0.5cm" href="'+url+'"><img class="img-thumbnail" src="'+thumbnail+'"></a>');
-					};
-					img_preview("http://www.yahoo.com/");
-				  </script>
-
-					
-				  <div class="caption">
-					<h4>Title</h4>
-					<p>This is description<p>
-					<hr style="border-color:#000000">
-					<ul class="media-list" >
-					  <li class="media">
-						<a class="pull-left" href="#">
-						  <img class="media-object" src="img/head.jpg" alt="...">
-						</a>
-						<div class="media-body">
-						  <h5 class="media-heading">Comment</h5>
-						  
-						</div>
-					  </li>
-					</ul>
-					<p align="right">
-					<a href="#" class="btn btn-primary" role="button"><span class="glyphicon glyphicon-search"></span>	</a>
-					</p>
-				  </div>
-				</div>
-
-			  </div>
-			
-		  
-		  </div>
-		</div>
-		</div>
-		
-		
-		<!--CreateTack form-->
-		<form action="inserttack.php" name="createtack" method="post">
-		<div class = "modal fade" id = "createtack" role ="dialog">
+    <!--This is a create tack pop-up form-->
+<form action="inserttack.php" name="createtack" method="post">
+		<div class = "modal fade" id = "tack" role ="dialog">
 			<div class ="modal-dialog">
 				<div class = "modal-content">
 					<div class = "modal-header">
@@ -233,26 +183,68 @@
 						<select name="settings">
 							<option value="private" >Private</option>
 							<option value="public">Public</option>
-						</select><br></br>						
+						</select><br></br>
+						
+						
+					
+						
 					</div>
+					
 					<div class = "modal-footer">
 						<a class = "btn btn-default" data-dismiss = "modal">Cancel</a>
 						<a class = "btn btn-primary" data-dismiss = "modal" onclick="submitForm();">Create</a>
-					</div>
+						
+					
 				</div>
 			</div>
-			</div>
+		</div>
+			<!--Tack Object-->
+			<!-- <div class="caption">
+			  <div class="col-sm-6 col-md-4">
+				<div class="thumbnail">
 
-			<script type="text/javascript">
+				  <!--The JS function to printout img by url
+				  
+                                  <script>
+					function img_preview(url) {
+						var apiKey = 'bTmGswCsoBm9',
+							thumbail;
+						thumbnail = 'http://images.websnapr.com/?url=' + url + '&key=bTmGswCsoBm9&hash=' + encodeURIComponent(websnapr_hash);
+						document.write('<a target="_blank" style="display: block; margin: 0.5cm" href="'+url+'"><img class="img-thumbnail" src="'+thumbnail+'"></a>');
+					};
+					img_preview("http://www.yahoo.com/");
+				  </script>
 
-			 function submitForm()
-			 {
-				   alert('sub');
-				   document.createtack.submit();
-			 }
-			</script>
-		</form>	
+					
+				  
+					<h4>Title</h4>
+					<p>This is description<p>
+					<hr style="border-color:#000000">
+					<ul class="media-list" >
+					  <li class="media">
+						<a class="pull-left" href="#">
+						  <img class="media-object" src="img/head.jpg" alt="...">
+						</a>
+						<div class="media-body">
+						  <h5 class="media-heading">Comment</h5>
+						  
+						</div>
+					  </li>
+					</ul>
+					<p align="right">
+					<a href="#" class="btn btn-primary" role="button"><span class="glyphicon glyphicon-search"></span>	</a>
+					</p>
+				  </div> 
+				</div>
+
+                  </div>-->
+			
+		  
+		  </div>
+		</div>
+		</div>
 		
+
 
 		<form action="insertboard.php" name="create" method="post">
 			<div class = "modal fade" id = "creatboard" role ="dialog">
@@ -293,30 +285,17 @@
 			</div>
 			</div>
 
-			<script type="text/javascript">
-			 function submitForm()
+			<script type="text/javascript" src="jquery.min.js"></script>
+                        <script type="text/javascript">                        
+                        function submitForm()
 			 {
 				   alert('sub');
 				   document.createboard.submit();
 			 }
+                         
 			</script>
-		</form>	
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+		</form>			
 	
-		
-		
-		
 	</body>
 
 </html>

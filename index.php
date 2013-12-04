@@ -23,7 +23,7 @@
   <body>
 
     <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
-      <div class="container">
+      <div class="container" >
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
             <span class="sr-only">Toggle navigation</span>
@@ -31,14 +31,15 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.php">Sneak Peak</a>
+          <a class="navbar-brand" href="index.php" >MyTacks Inc.</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
           <ul class="nav navbar-nav">
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Learn More</a></li>
+            <!--<li><a href="#about"></a></li>
+            <li><a href="#services">Learn More</a></li> -->
+            <li><a href="register.php">Register</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->

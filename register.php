@@ -146,53 +146,33 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <div class="animbrand"><a class="navbar-brand" href="http://bootsnipp.com">Bootsnipp</a></div>
-  </div>
 
   <!-- Collect the nav links, forms, and other content for toggling -->
-  <div class="collapse navbar-collapse navbar-bootsnipp-collapse">
-    <ul class="nav navbar-nav">
-     <li class=""><a href="http://bootsnipp.com"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-     <li class="dropdown ">
-      <a href="http://bootsnipp.com/snippets" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-list"></span> Snippets <b class="caret"></b></a>
-      <ul class="dropdown-menu">
-        <li class=""><a href="http://bootsnipp.com/snippets/featured"><span class="glyphicon glyphicon-star"></span> Featured</a></li>
-        <li class="divider"></li>
-        <li class=""><a href="http://bootsnipp.com/tags"><span class="glyphicon glyphicon-tags"></span> Tags</a></li>
-        <li class="divider"></li>
-        <li class="dropdown-header">By Bootstrap version:</li>
-                <li><a href="http://bootsnipp.com/tags/3.0.0"><span class="label label-info tip">3.0.0</span></a></li>
-                <li><a href="http://bootsnipp.com/tags/2.3.2"><span class="label label-info tip">2.3.2</span></a></li>
-              </ul>
-      </li>
-      <li class="dropdown ">
-       <a href="http://bootsnipp.com/resources" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-book"></span> Resources <b class="caret"></b></a>
-       <ul class="dropdown-menu">
-         <li class=""><a href="http://bootsnipp.com/resources"><span class="glyphicon glyphicon-align-justify"></span> List of resources</a></li>
-         <!-- <li  class=""><a href="http://bootsnipp.com/blog"><span class="glyphicon glyphicon-list-alt"></span> Boostnipp Blog</a></li> -->
-         <li><a href="http://getbootstrap.com" target="_blank"><span class="glyphicon glyphicon-cloud-download"></span> Download bootstrap</a></li>
-         <li class="divider"></li>
-         <li class="dropdown-header">Builders</li>
-         <li class=""><a href="http://bootsnipp.com/forms"><span class="glyphicon glyphicon-tasks"></span> Form Builder</a></li>
-         <li class=""><a href="http://bootsnipp.com/buttons"><span class="glyphicon glyphicon-edit"></span> Button builder</a></li>
-       </ul>
-     </li>
+      <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+      <div class="container" >
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.php" >MyTacks Inc.</a>
+        </div>
 
-     <li class=""><a href="http://bootsnipp.com/about"><span class="glyphicon glyphicon-info-sign"></span> About</a></li>
-         </ul>
-    <form class="navbar-form navbar-left" action="http://bootsnipp.com/search" method="GET" id="search-form" role="search">
-     <div class="form-group form-slide" style="overflow: hidden;">
-       <input type="text" class="form-control form-input-slide" name="q" placeholder="Search by title or tag" style="margin-left:-170px;">
-    </div>
-     <button type="submit" class="btn btn-default search-btn"><span class="glyphicon glyphicon-search"></span></button>
-    </form>
-    <ul class="nav navbar-nav navbar-right">
-            <li id="nav-register-btn" class="active"><a href="http://bootsnipp.com/register">Register</a></li>
-       <li id="nav-login-btn" class=""><a href="index.php"><i class="icon-login"></i>Login</a></li>
-         </ul>
-  </div><!-- /.navbar-collapse -->
-  </div>
-  </nav>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav">
+            <!--<li><a href="#about"></a></li>
+            <li><a href="#services">Learn More</a></li> -->
+            <li><a href="register.php">Register</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container -->
+    </nav>
+
+    </div><!-- /full-width-image-1 -->
         
     <!-------- START FORM ----->  
         <div class="container">
@@ -220,7 +200,7 @@
                                         <input class="form-control middle" placeholder="Password*" name="password" type="password" value="">
                                         <input class="form-control bottom" placeholder="Confirm Password*" name="password_confirmation" type="password" value="">
                                         <input class="btn btn-lg btn-primary btn-block" type="submit" value="Register">
-                                            <p class="text-center" style="margin-top:10px;">OR</p>
+                                            <p class="text-center" style="margin-top:10px;"><font color = "black">OR</font></p>
 				  	<p class="text-center"><a href="index.php">Already have an account?</a></p>
 			  	</fieldset>
 		  	</form>
@@ -228,7 +208,9 @@
   	</div>
 </div>
     </div>
-    <footer class="bs-footer" role="contentinfo">
+  
+  <!-- FOOTER -->
+  <footer class="bs-footer" role="contentinfo">
   <div class="container">
     <div class="bs-social">
       <ul class="bs-social-buttons">
@@ -238,18 +220,20 @@
         <li class="follow-btn">
           <iframe allowtransparency="true" frameborder="0" scrolling="no"
             src="//platform.twitter.com/widgets/follow_button.html?screen_name=bootsnipp"
-            style="width:236px; height:20px;" class="twitter-follow-button twitter-follow-button"></iframe>
+            style="width:136px; height:20px;" class="twitter-follow-button twitter-follow-button"></iframe>
         </li>
         <li class="tweet-btn">
           <iframe allowtransparency="true" frameborder="0" scrolling="no"
                  src="https://platform.twitter.com/widgets/tweet_button.html?lang=en&via=bootsnipp&url=http%3A%2F%2Fbootsnipp.com&text=RT%20Design%20elements%20and%20code%20snippets%20for%20%23twbootstrap%20HTML%2FCSS%2FJS%20framework"
-                 style="width:236; height:20px;" class="twitter-share-button twitter-count-horizontal"></iframe>
+                 style="width:136; height:20px;" class="twitter-share-button twitter-count-horizontal"></iframe>
         </li>
       </ul>
     </div>
-    <p align="center">MyTacksSystem.com was crafted by Scales Inc. DB Hosted on <a href="http://aws.amazon.com/rds/" target="_blank" title="Amazon RDS Cloud Hosting"><img src="http://www.cloudreviews.com/blog/wp-content/uploads/2013/06/rds_logo1_300x100.png" alt = "AWS RDS" height="42" width="142"></a></p>
+    <p align="center">MyTacksSystem.com was crafted by Scales Inc. DB Hosted on <a href="http://aws.amazon.com/rds/" target="_blank" title="Amazon RDS Cloud Hosting"><img src="http://www.cloudreviews.com/blog/wp-content/uploads/2013/06/rds_logo1_300x100.png" alt = "AWS RDS" height="42" width="120"></a></p>
   </div>
-</footer>    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+</footer>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
     <script src="http://bootsnipp.com/js/vendor/placeholder.min.js"></script>
     <script src="ddmmyyyy-validation.js"></script>
