@@ -23,7 +23,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.php" >MyTacks Inc.</a>
+          <a class="navbar-brand" href="../index.php" >MyTacks Inc.</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -31,8 +31,8 @@
           <ul class="nav navbar-nav">
             <!--<li><a href="#about"></a></li>
             <li><a href="#services">Learn More</a></li> -->
-            <li><a href="register.php">Register</a></li>
-            <li><a href="Contact/contact.php">Contact</a></li>
+            <li><a href="../register.php">Register</a></li>
+            <li><a href="contact.php">Contact</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container -->

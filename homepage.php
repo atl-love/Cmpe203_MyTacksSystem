@@ -27,67 +27,52 @@
 
     </head>
 	<body>
-		<nav class="navbar navbar-inverse" role="navigation">
-		  <!-- Brand and toggle get grouped for better mobile display -->
-		  <div class="navbar-header">
-			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-			  <span class="sr-only">Toggle navigation</span>
-			  <span class="icon-bar"></span>
-			  <span class="icon-bar"></span>
-			  <span class="icon-bar"></span>
-			</button>
-			<a class="navbar-brand" href="#">MyTacks.com</a>
-		  </div>
-
-		  <!-- Collect the nav links, forms, and other content for toggling -->
-		  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-			<!--<ul class="nav navbar-nav">
-			  <li class="active"><a href="#">Link</a></li>
-			  <li><a href="#">Link</a></li>
-			</ul>
-			<form class="navbar-form navbar-left" role="search">
-			  <div class="form-group">
-				<input type="text" class="form-control" placeholder="Search">
-			  </div>
-			  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></button>
-				<ul class="dropdown-menu pull-right">
-				  <li><a href="#">Action</a></li>
-				  <li><a href="#">Another action</a></li>
-				  <li><a href="#">Something else here</a></li>
-				  <li class="divider"></li>
-				  <li><a href="#">Separated link</a></li>
-				</ul>
-			  <button type="submit" class="btn btn-default">Submit</button>
-			</form>-->
-			<div class="col-lg-6" style="margin-top:8px">
-			<div class="input-group">
-			  <input type="text" class="form-control">
-			  <div class="input-group-btn">
-				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"> <span class="caret"></span></button>
-				<ul class="dropdown-menu pull-right">
-				  <li><a href="#">Tack</a></li>
-				  <li><a href="#">User</a></li>
-				  <li><a href="#">Both</a></li>
-				</ul>
-			  </div><!-- /btn-group -->
-			  <button type="submit" class="btn btn-default" style="margin-left:10px">
-				<span class="glyphicon glyphicon-search"></span>
-			  </button>
-			</div><!-- /input-group -->
-		  </div><!-- /.col-lg-6 -->
-			<ul class="nav navbar-nav navbar-right">
-			  <li class="dropdown">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo "$userName" ?><b class="caret"></b></a>
-				<ul class="dropdown-menu">
-				  <li><a href="#">About us</a></li>
-				  <li><a href="#">Account Setting</a></li>
-				  <li class="divider"></li>
-				  <li><a href="#">Log Out</a></li>
-				</ul>
-			  </li>
-			</ul>
-		  </div><!-- /.navbar-collapse -->
-		</nav>	
+        <!-- NAVIGATION BAR -->
+            <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+              <div class="container" >
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="index.php" >MyTacks Inc.</a>
+                </div>
+        
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-ex1-collapse">
+                  <ul class="nav navbar-nav">
+                    <!--<li><a href="#about"></a></li>
+                    <li><a href="#services">Learn More</a></li> -->
+                    <li><a href="register.php">Register</a></li>
+                    <li><a href="Contact/contact.php">Contact</a></li>
+                    
+                  </ul>
+                  
+                <div class="col-sm-6 col-md-6 pull-center">
+                    <form class="navbar-form" role="search">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
+                            <div class="input-group-btn">
+                                <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="collapse navbar-collapse navbar-ex1-collapse pull-right">
+                  <dl class="nav navbar-nav">
+                    <li><a href="register.php">Create</a></li>
+                    <li><a href="Contact/contact.php">Contact</a></li>
+                  </dl>
+                  
+                </div><!-- /.navbar-collapse -->
+                
+              </div><!-- /.container -->
+            </nav>
+            <br><br><br><br>
+            
 		
 		<!-- Left Sidebar -->
 		<div class="row">
