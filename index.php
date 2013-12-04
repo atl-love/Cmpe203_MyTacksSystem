@@ -40,7 +40,7 @@
             <!--<li><a href="#about"></a></li>
             <li><a href="#services">Learn More</a></li> -->
             <li><a href="register.php">Register</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="Contact/contact.php">Contact</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container -->
