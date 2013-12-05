@@ -49,7 +49,7 @@
     <div class="full-width-image-1">
 
       <div class="logo-wrapper">
-        <img class="img-responsive" src="http://placehold.it/200x200&text=Logo" / >
+        <img src="http://placehold.it/200x200&text=Logo" align="absmiddle" class="img-responsive" / >
       </div>
 
     </div><!-- /full-width-image-1 -->
@@ -66,7 +66,7 @@
 			  		<hr class="colorgraph">
 					<font color="red"><center>
 					<?php $reasons = array("passwordErr" => "Wrong Username or Password!", "blank" => "You have left one or more fields blank.");
-					    if ($_GET["loginFailed"])
+					    if (!empty($_GET['login']) && $_GET['login'] == "failed" )
 						echo $reasons[$_GET["reason"]];
 					?></center>
 					<font color="black">

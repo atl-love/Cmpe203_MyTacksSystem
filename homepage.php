@@ -3,7 +3,6 @@
     include('config2.php');
     
     $userName = "".$_SESSION['username']."";
-    echo $userName;
 
     //grab tack data
     $result="SELECT * FROM tack WHERE userName='$userName'";
@@ -43,15 +42,8 @@
         
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse navbar-ex1-collapse">
-                  <ul class="nav navbar-nav">
-                    <!--<li><a href="#about"></a></li>
-                    <li><a href="#services">Learn More</a></li> -->
-                    <li><a href="register.php">Register</a></li>
-                    <li><a href="Contact/contact.php">Contact</a></li>
-                    
-                  </ul>
                   
-                <div class="col-sm-6 col-md-6 pull-center">
+                <div class="col-sm-8 col-md-8 pull-center">
                     <form class="navbar-form" role="search">
                         <div class="input-group">
                             <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
@@ -61,11 +53,13 @@
                         </div>
                     </form>
                 </div>
-                
-                <div class="collapse navbar-collapse navbar-ex1-collapse pull-right">
+
+		  <div class="collapse navbar-collapse navbar-ex1-collapse pull-right">
                   <dl class="nav navbar-nav">
+                    <li><a href="Contact/contact.php">Contact</a></li>
                     <li><a href="logout.php">Logout <?php echo $userName;?></a></li>
                   </dl>
+                  
                   
                 </div><!-- /.navbar-collapse -->
                 
@@ -123,6 +117,7 @@
 		  <?php
 			$tack_num=1;
 			//echo mysqli_num_rows($result);
+			$row = 0;
                             if($row > 0){
 				while($row = mysqli_fetch_array($result)) {
 					

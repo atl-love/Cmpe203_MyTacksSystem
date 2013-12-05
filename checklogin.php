@@ -22,8 +22,9 @@ $count=mysql_num_rows($result);
 if($count==1){
 
     // Register $username, $password and redirect to file "homepage.php"
-    session_register("username");
-    session_register("password"); 
+    $_SESSION['login_user']="username";
+    $_SESSION['login_user']="password";
+    
     header("location: homepage.php");
 } else {
     die(header("location:index.php?loginFailed=true&reason=passwordErr"));    
