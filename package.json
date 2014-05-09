@@ -1,0 +1,32 @@
+{
+  "name": "CMPE273_AdvertisementWebsite",
+  "version": "0.0.0",
+  "description": "CMPE273 Advertisement Crawler and Intelligent Ad Generator",
+  "main": "autocomplete.js",
+  "dependencies": {
+    "underscore": "~1.6.0",
+    "express": ">= 2.0.0 < 3.0.0",
+    "mongoose": "^3.8.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "expresso"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/atl-love/Cmpe203_MyTacksSystem.git"
+  },
+  "keywords": [
+    "advertisement",
+    "cosine",
+    "similarity",
+    "machine",
+    "learning"
+  ],
+  "author": "Ashley Love",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/atl-love/Cmpe203_MyTacksSystem/issues"
+  },
+  "homepage": "https://github.com/atl-love/Cmpe203_MyTacksSystem"
+}
